@@ -14,21 +14,13 @@ let bulletNumber = 5,
 if (bulletNumber > 7 || shotsFired > 7) {
     console.log('Тебе бы научиться пользоваться револьвером, амиго!');
 } else {
-    
-    let currentShot = 1;
-
-    while (currentShot <= shotsFired) {
+    for (let currentShot = 1; currentShot <= shotsFired; currentShot++) {
         if (currentShot === bulletNumber) {
             console.log('БАХ!');
             break;
         }
         console.log('Щёлк');
-        currentShot++
     }
 
-    if (bulletNumber > shotsFired) {
-        console.log('Игрок выжил');
-    } else {
-        console.log('Игрок не выжил');
-    }
+    bulletNumber > shotsFired ? console.log('Игрок выжил') : console.log('Игрок не выжил');
 }
