@@ -32,7 +32,3 @@ if (bulletNumber > 7 || shotsFired > 7) {
         console.log('Игрок не выжил');
     }
 }
-
-
-// console.log('Щёлк');
-// console.log('БАХ!');
