@@ -8,3 +8,31 @@
 В конце должно вывестись сообщение “игрок выжил” / “игрок не выжил”
 */
 
+let bulletNumber = 5,
+    shotsFired = 4;
+
+if (bulletNumber > 7 || shotsFired > 7) {
+    console.log('Тебе бы научиться пользоваться револьвером, амиго!');
+} else {
+    
+    let currentShot = 1;
+
+    while (currentShot <= shotsFired) {
+        if (currentShot === bulletNumber) {
+            console.log('БАХ!');
+            break;
+        }
+        console.log('Щёлк');
+        currentShot++
+    }
+
+    if (bulletNumber > shotsFired) {
+        console.log('Игрок выжил');
+    } else {
+        console.log('Игрок не выжил');
+    }
+}
+
+
+// console.log('Щёлк');
+// console.log('БАХ!');
