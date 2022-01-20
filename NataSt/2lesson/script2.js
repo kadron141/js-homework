@@ -9,7 +9,7 @@
 */
 
 let bulletNumber = 5,
-    shotsFired = 4;
+    shotsFired = 3;
 
 if (bulletNumber > 7 || shotsFired > 7) {
     console.log('Тебе бы научиться пользоваться револьвером, амиго!');
