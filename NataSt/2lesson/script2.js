@@ -23,4 +23,9 @@ if (bulletNumber > 7 || shotsFired > 7) {
     }
 
     bulletNumber > shotsFired ? console.log('Игрок выжил') : console.log('Игрок не выжил');
+
+    let i;
+
+    let a = i ?? "asasg";
+    console.log(a)
 }
