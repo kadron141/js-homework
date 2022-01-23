@@ -2,7 +2,7 @@ let a = 1;
 let b = -8;
 let c = 2;
 let D = b * b - 4 * a * c;
-let Number2;
+let Number1;
 let Number2;
 
 if (D > 0) {
