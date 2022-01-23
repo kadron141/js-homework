@@ -1,6 +1,4 @@
 "use strict"
-
-
 let bulletNumber = 5; //в каком гнезде пуля
 
 let shotsFired = 1; //количество выстрелов
