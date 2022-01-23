@@ -5,10 +5,20 @@ let shotsFired = 5;
 
 if (bulletNumber > 7 || shotsFired > 7) {
     console.log('Ошибка'); 
-} else if (bulletNumber === shotsFired) {
-    console.log('бах!');
-    console.log('игрок не выжил');
 } else {
-    console.log('щёлк');
-    console.log('игрок выжил');
+    for (let i = 1; i < 7; i++) {
+        if (i !== bulletNumber) {
+            console.log('щёлк');
+        } else {
+                console.log('бах!');
+                break;
+        }
+    }
+    if (bulletNumber < shotsFired) {
+        console.log('игрок не выжил');
+    } else {
+        console.log('игрок выжил');
+    }
 }
+
+    
