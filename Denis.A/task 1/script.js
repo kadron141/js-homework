@@ -1,8 +1,8 @@
 "use strict"
 const FOUR = 4;
-let a = 10;
-let b = 85;
-let c = 43;
+let a = 2032434;
+let b = 2342414;
+let c = 143252;
 let sum = FOUR * a * c;
 let disc = b **2 - sum;
 let x1 = (-b + Math.sqrt(disc)) / (2 * a);
