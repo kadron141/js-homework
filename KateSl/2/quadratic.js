@@ -12,12 +12,12 @@ let D = b * b - 4 * a * c;
 
 if (D < 0) {
     console.log("у уравнения нет действительных корней");
-    } else if(D === 0) {
+} else if(D === 0) {
     let x = -b / 2 * a;
     console.log("корень уравнения повторяется и равен: x =" + x);
-    } else if(D > 0) {
-    let x1 = (-b + Math.sqrt(D)) / 2 * a;
-    let x2 = (-b - Math.sqrt(D)) / 2 * a;
+} else if(D > 0) {
+    let x1 = (-b + Math.sqrt(D)) / (2 * a);
+    let x2 = (-b - Math.sqrt(D)) / (2 * a);
     console.log("корни уравнения: x1 =" + x1 +", x2 =" + x2);
 }
 

@@ -1,12 +1,12 @@
 "use strict"
 
-let bulletNumber = 4;
-let shotsFired = 5;
+let bulletNumber = 5;
+let shotsFired = 2;
 
 if (bulletNumber > 7 || shotsFired > 7) {
     console.log('Ошибка'); 
 } else {
-    for (let i = 1; i < 7; i++) {
+    for (let i = 1; i <= shotsFired; i++) {
         if (i !== bulletNumber) {
             console.log('щёлк');
         } else {
@@ -14,7 +14,7 @@ if (bulletNumber > 7 || shotsFired > 7) {
                 break;
         }
     }
-    if (bulletNumber < shotsFired) {
+    if (bulletNumber <= shotsFired) {
         console.log('игрок не выжил');
     } else {
         console.log('игрок выжил');
