@@ -13,11 +13,11 @@
 function getString (letter, str) {
     let res = '';
     for (let i = 0; i < str.length; i++) {
-        if ((str[i] === letter || str[i].toUpperCase() === letter.toUpperCase()) && str[i+1].match(/[a-z]/i)) {
+        if ((str[i] === letter || str[i] === letter.toUpperCase()) && str[i+1].match(/[a-z]/i)) {
             res += str[i+1];
         }
     }
     return res;
 }
 
-console.log(getString('r', "Katy Perry is on the radio!"));
+console.log(getString('r', "are you really learning Ruby?"));
