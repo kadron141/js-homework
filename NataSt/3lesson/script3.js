@@ -14,16 +14,12 @@
 // cubeSum(9, 9); // => 0
 
 function cubeSum(n, m) {
-    let sum = 0;
+   let sum = 0;
 
-    if (n === m) {
-        return sum;
-    } else {
-        for (let i = Math.min(n, m)+1; i <= Math.max(n, m); i++) {
-            sum += i ** 3;
-        }
-    }
-    return sum;
+   for (let i = Math.min(n, m)+1; i <= Math.max(n, m); i++) {
+      sum += i ** 3;
+   }
+   return sum;
 }
 
 console.log(cubeSum(17,14));
