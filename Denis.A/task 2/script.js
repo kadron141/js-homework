@@ -1,17 +1,25 @@
 "use strict"
-let bulletNumber = 5; //в каком гнезде пуля
+let bulletNumber = 6; //в каком гнезде пуля
 
-let shotsFired = 1; //количество выстрелов
+let shotsFired = 3; //количество выстрелов
 
-if(bulletNumber,shotsFired > 7){
+if(bulletNumber > 7 || shotsFired > 7){
     console.log('Ошибка!!!');
     }else{
         
-        for (; shotsFired < bulletNumber ; shotsFired++){
+        for (let i =1; i <= shotsFired; i++){
 
-            console.log('щелк' + shotsFired + ' ' + 'игрок выжил'); 
-            
-            }
-            console.log('бах' + ' ' + 'игрок не выжил');
+            if (i !== bulletNumber) {
+
+            console.log('щёлк');
+                } else {
+                    console.log('бах!');
+                }
                 
         }
+        if (bulletNumber <= shotsFired) {
+                    console.log('игрок не выжил');
+                } else {
+                    console.log('игрок выжил');
+                }
+            }
