@@ -1,20 +1,20 @@
+//Дана строка из двух слов, разделённых пробелом. Нужно вернуть строку, в которой первые буквы слов будут поменяны местами. Пример: 
+
+//“not picking” ->  “pot nicking”
+
+
+
 "use strict"
 
-const a = 1;
-const b = -5;
-const c = -7;
+let string = "not picking";
+let i = string.indexOf(" ");
+let newString = "";
 
-let d = (b**2)-(4*a*c);
+function changeLetters(string) {
+    if (!string) {
+        return string;
+    } 
+    return newString = string[i + 1] + string.slice(1, i) + " " + string[0] + string.slice(i + 2);
+}
 
-if (d < 0){ 
-    console.log('у уравнения нет корней');
-} else {
-    if (d === 0){
-    let x = -b / (2*a);
-    console.log('корень уравнения повторяется и равен:' + x);
-} else {
-    let x1 = (-b + Math.sqrt(d)) / (2 * a);
-    let x2 = (-b - Math.sqrt(d)) / (2 * a);
-    console.log('корни уравнения: х1 = ' + x1 + ` ` + 'х2 =' + x2);
-}
-}
+console.log(changeLetters("not picking"));
