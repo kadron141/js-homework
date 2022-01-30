@@ -16,7 +16,7 @@ let letter = prompt("Введите букву");
 function comesAfter () {
     let result = " ";
 
-    for (let i = 0; i < string.length; i++) {
+    for (let i = 0; i < string.length - 1; i++) {
         if (string[i] === letter || string[i] === letter.toUpperCase()) {
             result += string[i+1];
         }

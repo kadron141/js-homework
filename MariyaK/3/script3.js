@@ -15,14 +15,8 @@
 function cubeSum(n, m) {
     let result = 0;
 
-    if (n > m) {
-        for ( let i = m + 1; i <= n; i++) {
-            result += i ** 3;
-        }
-    } else {
-        for (let i = n + 1; i <= m; i++) {
-            result += i ** 3;
-        }
+    for (let i = Math.min(n, m)+1; i <= Math.max(n, m); i++) {
+        result += i ** 3;
     }
 
     return result;
