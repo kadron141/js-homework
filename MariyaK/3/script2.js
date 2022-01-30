@@ -17,7 +17,7 @@ function comesAfter () {
     let result = " ";
 
     for (let i = 0; i < string.length - 1; i++) {
-        if (string[i] === letter || string[i] === letter.toUpperCase()) {
+        if ((string[i] === letter || string[i] === letter.toUpperCase()) && string[i + 1].match(/[a-z]/gi)) {
             result += string[i+1];
         }
     }
