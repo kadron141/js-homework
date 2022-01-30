@@ -12,7 +12,7 @@
 
 function getString (letter, str) {
     let res = '';
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < str.length - 1; i++) {
         if ((str[i] === letter || str[i] === letter.toUpperCase()) && str[i+1].match(/[a-z]/i)) {
             res += str[i+1];
         }
@@ -20,4 +20,4 @@ function getString (letter, str) {
     return res;
 }
 
-console.log(getString('r', "are you really learning Ruby?"));
+console.log(getString('r', "Katy Perry is on the radior"));
