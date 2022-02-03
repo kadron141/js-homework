@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .spinner-3::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: -30px;
+    margin-left: -30px;
+    border-radius: 50%;
+    border: 7px solid transparent;
+    border-top-color: black;
+    border-bottom-color: black;
+    animation: spinner 0.7s ease infinite;
+}
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+</style>
+<body id="main">
+    <button id="button" onclick="shot()">Попросить у папы денег</button>
+</body>
+<script src="index2.js"></script>
+</html>
