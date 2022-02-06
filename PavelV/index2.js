@@ -1,28 +1,24 @@
+// Дана строка и буква. Нужно вернуть строку, которая будет содержать все символы, следующие за заданной буквой. Примеры:
+
+// If letter = 'r':
+// comes_after("are you really learning Ruby?") # => "eenu"
+// comes_after("Katy Perry is on the radio!")   # => "rya"
+// comes_after("Pirates say arrrrrrrrr.")       # => "arrrrrrrr"
+// comes_after("r8 your friend")                # => "i"
+
+
+
 "use strict"
 
-let bulletNumber = 7;
-let shotsFired = 5;
+let result = "";
 
-if (bulletNumber > 7) {
-  console.log('ошибка');
-} else if(shotsFired > 7){
-  console.log('ошибка');
-} else if(bulletNumber === 0) {
-  console.log('ошибка');
-} else if(shotsFired === 0) {
-  console.log('ошибка');
-} else {
-
-for(let i = 1; i <= shotsFired; i++){
-
-  console.log(i);
-  if (bulletNumber === i){
-    console.log('бах', 'игрок погиб');
-    break;
-} else {
-  if(shotsFired === i){
-  console.log('щёлк', 'игрок выжил');
-} else {
-  console.log('щёлк');
+function getString(letter, string) {
+    for(let i = 0; i < string.length; i++) {
+        if(letter === string[i] || letter.toUpperCase() === string[i]) {
+            result += string[i + 1];
+        }
+    }
+    return result;
 }
-}}}
+
+console.log(getString("r", "Pirates say arrrrrrrrr."));
