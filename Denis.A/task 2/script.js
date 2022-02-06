@@ -15,6 +15,7 @@ if(bulletNumber > 7 || shotsFired > 7){
                 } else {
                     console.log('бах!');
                 }
+                break;
                 
         }
         if (bulletNumber <= shotsFired) {
