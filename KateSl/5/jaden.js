@@ -10,25 +10,13 @@
 
 
 let string = "How can mirrors be real if our eyes aren't real";
-let result = "";
 
-function getNewString() {
-    let spaceIndex;
-
-    for(let i = 0; i < string.length; i++){
-        if(string[i] === " ") {
-            spaceIndex = i;
-        }
-    }
-
-    for(let i = 0; i < string.length; i++) {
-        if(i !== string[spaceIndex + 1]){
-            result += string[i];
-        } else {
-            result += string[i + 1].toUpperCase();
-        }
-    }
-    return result;
+function getNewString(string){
+    return string
+    .split(' ') 
+    .map((word, index) => index == 0 ? word[0].toUpperCase() + word.slice(1) : word[0].toUpperCase() + word.slice(1))
+    .join(' ');        
 }
 
-console.log(getNewString(string))
+console.log(getNewString(string));
+
