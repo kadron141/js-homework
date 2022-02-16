@@ -42,6 +42,19 @@
     margin-bottom: 50px;
 }
 
+.todo-wrapper.done {
+    background-color: rgb(205, 238, 192);
+}
+
+.todo-wrapper.done div {
+    text-decoration: line-through;
+}
+
+button.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .todo-body {
     font-size: 20px;
     font-weight: bold;
