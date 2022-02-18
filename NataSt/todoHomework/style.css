@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', 'sans-serif';
+}
+
+body {
+    background-color: rgba(186, 166, 187, 0.953);
+}
+
+.header {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.header button {
+    width: 180px;
+    height: 50px;
+    box-shadow: 8px 8px 10px 0.5px rgba(0, 0, 0, .3);
+    background-color: rgb(231, 216, 233);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.header input {
+    border-radius: 5px;
+    width: 30%;
+    font-size: 18px;
+    padding: 10px;
+    outline-color: rgb(206, 186, 208);
+}
+
+.todos-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+}
+
+.todo-wrapper {
+    width: 50%;
+    height: 100px;
+    background-color: rgb(143, 104, 146);
+    border: 0.5px solid rgb(143, 104, 146);
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0.5px rgba(0, 0, 0, .3);
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.todo-wrapper:first-child {
+    margin-bottom: 50px;
+}
+
+.done {
+    background-color: rgb(122, 153, 105);
+    transition-duration: 0.5s;
+}
+
+.task {
+    width: 45%;
+}
+
+.date {
+    width: 25%;
+}
+
+#done-todo-button {
+    width: 60px;
+    height: 40px;
+    font-size: 18px;
+    color: #000;
+    background-color: rgb(231, 216, 233);
+    border-radius: 5px;
+}
+
+#delete-todo-button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #000;
+    background-color: rgb(231, 216, 233);
+    border-radius: 100%;
+}
