@@ -25,7 +25,7 @@ function cubeSum(n, m) {
 
         return (result);
 
-    } else if (n = m) {
+    } else if (n === m) {
         return (result);
     }
 }
