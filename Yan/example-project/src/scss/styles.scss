@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .login-wrapper {
+        width: 600px;
+        height: 350px;
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+
+        .login-input {
+            height: 40px;
+
+            &.error {
+                border: 1px solid red;
+            }
+        }
+
+        label {
+            font-size: 25px;
+        }
+
+        button {
+            height: 40px;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+    .logout-button {
+        align-self: end;
+        margin-right: 100px;
+    }
+
+    .dashboard-wrapper {
+        width: 90%;
+        height: 80%;
+
+        h1 {
+            margin-bottom: 50px;
+        }
+
+        .data-list {
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            outline: 1px solid gainsboro;
+
+            .user-wrapper {
+                height: 70px;
+                display: flex;
+                padding: 10px 20px;
+                border-bottom: 1px solid gainsboro;
+                align-items: center;
+
+                button {
+                    margin-left: auto;
+                    width: 200px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none
+}
