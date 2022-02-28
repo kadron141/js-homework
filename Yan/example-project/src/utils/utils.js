@@ -1,6 +1,7 @@
 import { auth } from './api.js';
 import { USER_KEY, USERS_LIST_KEY, UID_KEY } from './constants.js';
 import { getUsers } from './api.js';
+import { showEditWindow } from '../components/dashboard/dashboard.js';
 
 export const onLoginSubmit = () => {
     const login = document.getElementById('login-input');
@@ -43,14 +44,18 @@ export const getUserAsHtml = (user) => {
     const userWrapper = document.createElement('div');
     const userBody = document.createElement('div');
     const deleteUser = document.createElement('button');
+    const editUser = document.createElement('button');
 
     userWrapper.className = 'user-wrapper';
 
     userWrapper.id = `user_${user.id}`
     deleteUser.id = `delete-user_${user.id}`;
+    editUser.id = `edit-user_${user.id}`;
 
     userBody.append(document.createTextNode(user.fullName));
     userWrapper.append(userBody);
+    editUser.append(document.createTextNode('Edit'));
+    userWrapper.append(editUser);
     deleteUser.append(document.createTextNode('X'));
     userWrapper.append(deleteUser);
 
@@ -68,6 +73,8 @@ export const onUserButtonClick = (e) => {
             const usersToSave = storedUsers.filter(user => user.id !== userId);
             user.parentNode.removeChild(user);
             localStorage.setItem(USERS_LIST_KEY, JSON.stringify(usersToSave));
+        } else {
+            showEditWindow(userId);
         }
     }
 }
@@ -92,4 +99,14 @@ export const addNewUser = (userData) => {
 
     appendUser(userToAdd);
     localStorage.setItem(USERS_LIST_KEY, JSON.stringify(usersToSave));
+}
+
+export const getUserById = (id) => {
+    const storedUsers = JSON.parse(localStorage.getItem(USERS_LIST_KEY));
+
+    return storedUsers.find(u => u.id === id);
+}
+
+export const saveUser = (id) => {
+
 }

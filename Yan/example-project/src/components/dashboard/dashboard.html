@@ -21,7 +21,7 @@
             <div class="data-list" id="data-container"></div>
         </div>
 
-        <div id="modal-window" class="modal-window hidden">
+        <div id="modal-add" class="modal-window hidden">
             <h2>
                 Create new user
             </h2>
@@ -45,6 +45,27 @@
             <div class="buttons">
                 <button class="btn-primary" id="submit-btn">Submit</button>
                 <button class="btn-secondary" id="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <div id="modal-edit" class="modal-window edit hidden">
+            <h2>
+                Edit user
+            </h2>
+
+            <div class="modal-form">
+                <label for="fullname">Full name*:</label>
+                <input type="text" name="fullname" id="fullname-edit">
+
+                <div class="is-admin">
+                    <label for="isAdmin">Is Admin:</label>
+                    <input type="checkbox" name="isAdmin" id="isAdmin-edit">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn-primary" id="submit-btn-edit">Submit</button>
+                <button class="btn-secondary" id="cancel-btn-edit">Cancel</button>
             </div>
         </div>
     </section>

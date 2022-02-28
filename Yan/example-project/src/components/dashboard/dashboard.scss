@@ -58,6 +58,10 @@
                     margin-left: auto;
                     width: 200px;
                     cursor: pointer;
+
+                    &:last-child {
+                        margin-left: 20px;
+                    }
                 }
             }
         }
@@ -72,6 +76,10 @@
         padding: 20px;
         display: flex;
         flex-direction: column;
+
+        &.edit {
+            height: 270px;
+        }
 
         .buttons {
             display: flex;
