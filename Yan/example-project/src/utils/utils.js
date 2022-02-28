@@ -9,7 +9,8 @@ export const onLoginSubmit = () => {
 
     if (user) {
         localStorage.setItem(USER_KEY, JSON.stringify(user));
-        initializeDashboard();
+        console.log('logged in as:', JSON.parse(localStorage.getItem(USER_KEY)));
+        console.log('redirect to dashboard');
     } else if (!login.className.includes('error') && !password.className.includes('error')) {
         login.className += ' error';
         password.className += ' error';
@@ -17,11 +18,6 @@ export const onLoginSubmit = () => {
 }
 
 export const initializeDashboard = () => {
-    const loginContainer = document.getElementById('login-container');
-    loginContainer.className += ' hidden';
-    const dashboard = document.getElementById('dashboard-container');
-    dashboard.className = 'dashboard-container';
-
     const users = getUsers();
     const dataContainer = document.getElementById('data-container');
     const logoutButton = document.getElementById('log-out');

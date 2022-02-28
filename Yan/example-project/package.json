@@ -1,8 +1,8 @@
 {
     "name": "example-project",
-    "source": "./src/index.html",
     "scripts": {
-        "serve": "parcel"
+        "serve:login": "parcel src/components/login/login.html",
+        "serve:dashboard": "parcel src/components/dashboard/dashboard.html"
     },
     "dependencies": {
         "parcel": "latest"
