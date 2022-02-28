@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header button, .header input, .task, #done-todo-button, #delete-todo-button, .date {
+    font-family: 'Bebas Neue', 'sans-serif';
+}
+
+
+body {
+    background-color: rgb(58, 180, 218);
+}
+
+.header {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.header button {
+    width: 180px;
+    height: 50px;
+    box-shadow: 8px 8px 10px 0.5px rgba(0, 0, 0, .10);
+    background-color: rgb(161, 214, 76);
+    font-size: 22px;
+    font-weight: 400;
+    border-radius: 8px;
+}
+
+.header input {
+    border-radius: 5px;
+    width: 30%;
+    font-size: 22px;
+    padding: 10px;
+    outline-color: rgb(161, 214, 76);
+    background-color: rgb(161, 214, 76);
+}
+
+.todos-list {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+}
+
+.todo-wrapper {
+    width: 56%;
+    height: 100px;
+    background-color: rgb(161, 214, 76);
+    border: 1.5px solid black;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0.5px rgba(0, 0, 0, .15);
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.todo-wrapper:first-child {
+    margin-bottom: 50px;
+}
+
+.done {
+    background-color: rgb(122, 153, 105);
+    transition-duration: 0.5s;
+}
+
+.task {
+    width: 45%;
+    font-size: 28px;
+}
+
+.date {
+    width: 25%;
+}
+
+#done-todo-button {
+    width: 60px;
+    height: 40px;
+    font-size: 22px;
+    color: #000;
+    background-color: rgb(129, 172, 62);
+    border-radius: 5px;
+}
+
+#delete-todo-button {
+    width: 38px;
+    height: 38px;
+    font-size: 25px;
+    color: #000;
+    background-color: rgb(129, 172, 62);
+    border-radius: 50%;
+} 
