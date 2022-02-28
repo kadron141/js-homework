@@ -12,10 +12,40 @@
 <body>
     <section class="dashboard-container" id="dashboard-container">
         <div class="logout-button"><button id="log-out">Log out</button></div>
-        <div class="dashboard-wrapper">
-            <h1>Dashboard</h1>
+        <div id="wrapper" class="dashboard-wrapper">
+            <div class="dashboard-header">
+                <h1>Dashboard</h1>
+                <button id="add-user-btn">+</button>
+            </div>
 
             <div class="data-list" id="data-container"></div>
+        </div>
+
+        <div id="modal-window" class="modal-window hidden">
+            <h2>
+                Create new user
+            </h2>
+
+            <div class="modal-form">
+                <label for="fullname">Full name*:</label>
+                <input type="text" name="fullname" id="fullname">
+
+                <label for="login">Login*:</label>
+                <input type="text" name="login" id="login">
+
+                <label for="balance">Balance($)*:</label>
+                <input type="number" name="balance" id="balance">
+
+                <div class="is-admin">
+                    <label for="isAdmin">Is Admin:</label>
+                    <input type="checkbox" name="isAdmin" id="isAdmin">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn-primary" id="submit-btn">Submit</button>
+                <button class="btn-secondary" id="cancel-btn">Cancel</button>
+            </div>
         </div>
     </section>
 

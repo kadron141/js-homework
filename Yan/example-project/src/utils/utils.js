@@ -1,5 +1,5 @@
 import { auth } from './api.js';
-import { USER_KEY, USERS_LIST_KEY } from './constants.js';
+import { USER_KEY, USERS_LIST_KEY, UID_KEY } from './constants.js';
 import { getUsers } from './api.js';
 
 export const onLoginSubmit = () => {
@@ -31,6 +31,12 @@ export const initializeDashboard = () => {
         const userNode = getUserAsHtml(user);
         dataContainer.append(userNode);
     })
+}
+
+export const appendUser = (user) => {
+    const dataContainer = document.getElementById('data-container');
+    const userNode = getUserAsHtml(user);
+    dataContainer.append(userNode);
 }
 
 export const getUserAsHtml = (user) => {
@@ -68,8 +74,22 @@ export const onUserButtonClick = (e) => {
 
 export const onLogout = () => {
     localStorage.removeItem(USER_KEY);
-    const loginContainer = document.getElementById('login-container');
-    loginContainer.className = 'login-container';
-    const dashboard = document.getElementById('dashboard-container');
-    dashboard.className += ' hidden';
+}
+
+export const addNewUser = (userData) => {
+    const uid = +new Date();
+    const storedUsers = JSON.parse(localStorage.getItem(USERS_LIST_KEY));
+    const userToAdd = {
+        id: uid,
+        fullName: userData.fullName,
+        balance: userData.balance,
+        login: userData.login,
+        password: userData.login,
+        isAdmin: userData.isAdmin,
+    }
+
+    const usersToSave = [...storedUsers, userToAdd];
+
+    appendUser(userToAdd);
+    localStorage.setItem(USERS_LIST_KEY, JSON.stringify(usersToSave));
 }
