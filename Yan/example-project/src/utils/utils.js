@@ -1,7 +1,7 @@
 import { auth } from './api.js';
 import { USER_KEY, USERS_LIST_KEY, UID_KEY } from './constants.js';
 import { getUsers } from './api.js';
-import { showEditWindow } from '../components/dashboard/dashboard.js';
+import { showEditWindow, showDeleteWindow } from '../components/dashboard/dashboard.js';
 
 export const onLoginSubmit = () => {
     const login = document.getElementById('login-input');
@@ -71,9 +71,13 @@ export const onUserButtonClick = (e) => {
         const userId = Number.parseInt(id.split('_')[1]);
 
         if (e.target.id.split('-')[0] === 'delete') {
-            const usersToSave = storedUsers.filter(user => user.id !== userId);
-            user.parentNode.removeChild(user);
-            localStorage.setItem(USERS_LIST_KEY, JSON.stringify(usersToSave));
+            const deleteUserCallback = () => {
+                const usersToSave = storedUsers.filter(user => user.id !== userId);
+                user.parentNode.removeChild(user);
+                localStorage.setItem(USERS_LIST_KEY, JSON.stringify(usersToSave));
+            }
+
+            showDeleteWindow(userId, deleteUserCallback);
         } else {
             showEditWindow(userId);
         }
