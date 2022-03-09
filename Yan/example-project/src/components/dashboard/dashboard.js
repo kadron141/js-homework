@@ -1,5 +1,5 @@
 import { USER_KEY } from '../../utils/constants.js';
-import { initializeDashboard, addNewUser, getUserById } from '../../utils/utils.js';
+import { initializeDashboard, addNewUser, getUserById, saveUser } from '../../utils/utils.js';
 
 let editedId = null;
 
@@ -68,7 +68,7 @@ submitEditUserButton.addEventListener('click', () => {
         alert('Fill in all required fields!')
     } else {
         console.log(editedId);
-        //saveUser(editedId, { fullName, login, balance, isAdmin });
+        saveUser(editedId, { fullName, isAdmin });
         hideEditWindow();
     }
 });

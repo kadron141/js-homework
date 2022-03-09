@@ -48,7 +48,8 @@ export const getUserAsHtml = (user) => {
 
     userWrapper.className = 'user-wrapper';
 
-    userWrapper.id = `user_${user.id}`
+    userBody.id = `username_${user.id}`;
+    userWrapper.id = `user_${user.id}`;
     deleteUser.id = `delete-user_${user.id}`;
     editUser.id = `edit-user_${user.id}`;
 
@@ -107,6 +108,19 @@ export const getUserById = (id) => {
     return storedUsers.find(u => u.id === id);
 }
 
-export const saveUser = (id) => {
+export const saveUser = (id, userData) => {
+    const storedUsers = JSON.parse(localStorage.getItem(USERS_LIST_KEY));
+    const usersToSave = storedUsers.map(user => {
+        if (user.id === id) {
+            user.fullName = userData.fullName;
+            user.isAdmin = userData.isAdmin;
+        }
 
+        return user;
+    });
+
+    const userNameHtml = document.getElementById(`username_${id}`);
+    userNameHtml.innerHTML = userData.fullName;
+
+    localStorage.setItem(USERS_LIST_KEY, JSON.stringify(usersToSave));
 }
