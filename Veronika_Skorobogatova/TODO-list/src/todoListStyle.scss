@@ -1,0 +1,96 @@
+*, *::after, *::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style-type: none;
+}
+
+.bounding-container {
+   width: 100vw;
+   height: 100vh;
+   margin: auto;
+   .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      height: 20%;
+      background-color: rgb(240, 226, 32);
+
+      form {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+         
+
+         input {
+            width: 50%;
+            cursor: pointer;
+         }
+
+            
+         button {
+            cursor: pointer;
+            width: 20%;
+            color: #fff;
+
+            &.delete-button {
+               background: rgb(248, 63, 49);
+            }
+            &.add-button {
+               background: rgb(29, 178, 247);
+            }
+         }
+      }
+   }
+   .todo-container {
+      background: rgb(29, 178, 247);
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      // .todoWrapper-done {
+      //    background: rgb(240, 226, 32);
+      // }
+
+      .todoWrapper {width: 90%;
+         height: 30px;display: flex;
+         align-items: center;
+         justify-content: space-around;margin-top: 10px; text-align: center;
+         background: #fff;
+         border-radius: 5px;
+
+         &.done {
+            background: rgb(240, 226, 32);
+         }
+
+
+         .todoBody {
+            
+         
+         }
+
+
+         .deleteButton { 
+            width: 10%;
+            color: #fff;
+            cursor: pointer;
+            background: rgb(248, 63, 49);
+            }
+         .completeButton {
+            width: 10%;
+            color: #fff;
+            cursor: pointer;
+            background: rgb(29, 178, 247);
+            }
+         
+      }
+   }
+
+}
