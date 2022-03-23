@@ -1,0 +1,11 @@
+{
+    "name": "example",
+    "source": "/src/index.html",
+    "scripts": {
+        "serve": "parcel"
+    },
+    "dependencies": {
+        "parcel": "latest"
+    }
+    
+}
