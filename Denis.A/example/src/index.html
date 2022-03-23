@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/style.scss">
+    <title>Document</title>
+</head>
+<body id="body">
+    <section class="trello-conteiner">
+        <div>
+            <div class="trello-wrapper">
+                <h1 class="trello-title">Trello</h1>
+                <button id="dat-button" class="dat-button"></button>
+            </div>
+        </div>
+        <div id="todo-conteiner" class="todo-conteiner">
+            <div id="todo-wrapper" class="todo-wrapper">
+                <div id="main-todo" class="main-todo">
+                    <h2>TODO</h2>
+                </div>
+                <div id="todo" class="todo"></div>
+
+                <button id="add-todo" class="add-todo">
+                    add todo
+                </button>
+            
+            </div>
+    
+            <div class="todo-wrapper">
+                <div class="main-todo">
+                    <h2>IN PROGRESS</h2>
+                </div>
+                <div id='todo-progress' class="todo"></div>
+            </div>
+    
+            <div class="todo-wrapper">
+                <div class="main-todo">
+                    <h2>DONE</h2>
+                </div>
+                <div  class="todo"></div>
+                <button class="add-todo">
+                    delete all
+                </button>
+            </div>
+        </div>
+
+        <div id="main-form" class = "main-form hidden">
+        
+            
+            <input id="input-title" class = "input-title" placeholder="title" type="text">
+            <textarea id="input-description" class = "input-description" placeholder="description" name="text" ></textarea>
+
+            <div class="button-conteiner"> 
+                <input id="input-user" class="user" placeholder="User"  type="text">
+                <button id="button-cancel" class="button-cancel">cancel</button>
+                <button id="button-confirm" class="button-confirm">confirm</button>
+            </div>
+        </div>
+
+
+        <div id="main-form-edit" class = "main-form-edit hidden">
+            
+            <input id="input-title-edit" class = "input-title" placeholder="title" type="text">
+            <input id="input-description-edit" class = "input-description" placeholder="description" type="text" >
+
+            <div class="button-conteiner"> 
+                <input id="input-user-edit" class="user" placeholder="User"  type="text">
+                <button id="button-cancel-edit" class="button-cancel">cancel</button>
+                <button id="button-confirm-edit" class="button-confirm">confirm</button>
+            </div>
+        </div>
+        
+    </section>
+
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
